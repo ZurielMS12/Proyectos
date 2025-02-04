@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles.css">
+    <script src="../static/app.js" defer></script>
+    <title>FISEP - Fiscalista Empresarial y Personal</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="../static/images/logo.jpg" alt="FISEP Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#inicio">INICIO</a></li>
+            <li><a href="#servicios">SERVICIOS</a></li>
+            <li><a href="#contacto">CONTACTO</a></li>
+            <li><a href="#acerca">ACERCA DE NOSOTROS</a></li>
+        </ul>
+        <button class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <header id="inicio" class="hero-section">
+        <h1>FISEP</h1>
+        <p>Fiscalista Empresarial y Personal</p>
+        <a href="#servicios" class="btn-primary">Nuestros Servicios</a>
+    </header>
+    <section class="carousel-section">
+        <div class="carousel">
+            <div class="carousel-container">
+                <div class="slide active">
+                    <img src="../static/images/auditoria.jpeg" alt="Servicio 1">
+                </div>
+                <div class="slide">
+                    <img src="../static/images/buzon1.jpeg" alt="Servicio 2">
+                </div>
+                <div class="slide">
+                    <img src="../static/images/buzon2.jpeg" alt="Servicio 3">
+                </div>
+                <div class="slide">
+                    <img src="../static/images/firma.jpeg" alt="Servicio 4">
+                </div>
+                
+                <button class="carousel-btn prev-btn">&#10094;</button>
+                <button class="carousel-btn next-btn">&#10095;</button>
+                
+                <div class="dots-container">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section id="servicios" class="cards-container">
+            <h2>Nuestros Servicios</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Asesorías y Consultas</h3>
+                    <p>Orientación profesional personalizada para resolver todas tus dudas fiscales y contables.</p>
+                </div>
+                <div class="card">
+                    <h3>Trámites</h3>
+                    <p>Gestión de trámites ante el SAT, altas, bajas y actualizaciones de situación fiscal.</p>
+                </div>
+                <div class="card">
+                    <h3>Declaraciones Provisionales</h3>
+                    <p>Preparación y presentación de declaraciones mensuales, bimestrales y trimestrales.</p>
+                </div>
+                <div class="card">
+                    <h3>Declaraciones Anuales</h3>
+                    <p>Elaboración y presentación de declaraciones anuales para personas físicas y morales.</p>
+                </div>
+                <div class="card">
+                    <h3>Atención a Auditorías</h3>
+                    <p>Acompañamiento y representación ante auditorías del SAT, IMSS e Infonavit.</p>
+                </div>
+                <div class="card">
+                    <h3>Cursos</h3>
+                    <p>Capacitación especializada en temas fiscales, contables y administrativos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact-section">
+            <h2>Contacto</h2>
+            <form id="contact-form" method="POST" action="/send_email">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="email" name="correo" placeholder="Correo Electrónico" required>
+                <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <div id="flash-messages" class="flash-messages"></div>
+
+        <section id="acerca" class="about-section">
+            <h2>Acerca de Nosotros</h2>
+            <p>Somos una empresa especializada en servicios fiscales y contables, comprometidos con brindar soluciones profesionales y personalizadas para empresas y particulares.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 FISEP - Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
